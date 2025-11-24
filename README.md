@@ -1,193 +1,120 @@
-# RAKHA X - Safety & Support Platform
+🚨 RAKHA X — Intelligent Safety & Support Platform
 
-A comprehensive Flask web application that combines street safety navigation, audio detection, emergency alerts, and AI-powered mental health support.
+AI-powered street safety, real-time emergency detection, and mental-wellbeing support — built end-to-end using Flask, ML models, and production-ready APIs.
 
-## Features
+Rakha X is a full-stack, real-world safety system designed to help users stay protected in high-risk situations.
+It combines audio threat detection, smart SOS alerts, an interactive safety simulator, and a mental-health AI assistant — all in one seamless web application.
 
-### 🎮 Street Safety Game (`/game`)
-- Interactive street navigation game
-- Real-time safety zone detection
-- Educational safety tips and warnings
-- Responsive controls (arrow keys or buttons)
+⭐ Why This Project Matters
 
-### 🔊 Audio Detection (`/detect`)
-- YAMNet-powered audio classification
-- Emergency sound detection (screams, gunshots, explosions)
-- Speech-to-text analysis for emergency keywords
-- Automatic SOS trigger on danger detection
+This isn’t a basic Flask CRUD app. It’s a multi-module safety platform solving real human problems:
 
-### 🚨 SOS Alert System (`/sos`)
-- WhatsApp integration via Twilio
-- Emergency contact notifications
-- Audio evidence playback
-- Quick access to all safety features
+Detects gunshots, screams, explosions using ML (YAMNet)
 
-### 🧠 AI Chatbot (`/chatbot`)
-- Gemini-powered mental health support
-- Crisis detection and intervention
-- Safety guidance and emotional support
-- Resource recommendations
+Analyses speech for panic keywords
 
-## Project Structure
+Triggers automatic WhatsApp SOS alerts
 
-```
+Guides users with AI-powered emotional support
+
+Educates citizens through a street safety simulation game
+
+Built with production practices — modular architecture, real APIs, secure uploads, and model pipelines.
+
+🎯 Key Features
+🕹️ 1. Street Safety Simulator
+
+A lightweight game that teaches users how to identify safe, caution, and danger zones.
+Built with: HTML Canvas + JS + Flask backend
+
+🎧 2. Real-Time Audio Threat Detection
+
+YAMNet model via TensorFlow
+
+Speech-to-text (Vosk)
+
+Detects emergency audio events
+
+Auto-triggers SOS if threat probability is high
+
+🚨 3. Smart SOS System
+
+WhatsApp alerts via Twilio
+
+Sends location, alert message & audio evidence
+
+One-click emergency button
+
+🧠 4. AI Mental-Health Assistant
+
+Gemini API integration
+
+Crisis detection
+
+Safety recommendations
+
+Emotional first-aid
+
+🏗️ Tech Stack
+
+Backend: Flask (Modular Blueprints)
+AI / ML: TensorFlow, TensorFlow Hub, YAMNet, Vosk STT
+Frontend: HTML, CSS, JS (Game + UI)
+APIs: Twilio WhatsApp, Google Gemini
+Audio Processing: Librosa
+Database: (Optional future module)
+
+📂 Project Structure
 project/
-├── app.py                 # Main Flask application
-├── requirements.txt       # Python dependencies
-├── README.md             # This file
-├── templates/            # HTML templates
-│   ├── index.html        # Main landing page
-│   ├── game.html         # Street safety game
-│   ├── detect.html       # Audio detection page
-│   ├── sos.html          # Emergency SOS page
-│   └── chatbot.html      # AI chatbot page
-├── static/               # Static assets
-│   ├── style.css         # Main stylesheet
-│   ├── game.css          # Game-specific styles
-│   ├── game.js           # Game JavaScript
-│   ├── script.js         # Chatbot JavaScript
-│   └── uploads/          # Audio file uploads
-└── models/               # ML model utilities
-    └── yamnet.py         # YAMNet classifier
-```
+├── app.py
+├── templates/
+├── static/
+├── models/
+└── requirements.txt
 
-## Installation
 
-1. **Clone or download the project**
-   ```bash
-   # If using git
-   git clone <repository-url>
-   cd project
-   ```
+Clear separation of concerns: UI, ML utilities, and backend routes.
 
-2. **Install Python dependencies**
-   ```bash
-   pip install -r requirements.txt
-   ```
+⚙️ Setup
+git clone <repo>
+cd project
+pip install -r requirements.txt
+python app.py
 
-3. **Set up API keys** (Optional - for full functionality)
-   - **Twilio**: Update `account_sid` and `auth_token` in `app.py`
-   - **Gemini**: Update `GEMINI_API_KEY` in `app.py`
+Add API Keys
 
-4. **Run the application**
-   ```bash
-   python app.py
-   ```
+In app.py:
 
-5. **Access the application**
-   - Open your browser to `http://localhost:5000`
-   - Navigate between different features using the main page
+GEMINI_API_KEY = "your_key"
+account_sid = "your_sid"
+auth_token = "your_token"
 
-## Usage
 
-### Main Navigation
-- **Home** (`/`): Overview of all features
-- **Game** (`/game`): Street safety navigation game
-- **Detect** (`/detect`): Upload and analyze audio files
-- **SOS** (`/sos`): Emergency alert system
-- **Chatbot** (`/chatbot`): AI mental health support
+Then launch the app at http://localhost:5000.
 
-### Street Safety Game
-- Use arrow keys or on-screen buttons to navigate
-- Explore different streets to reveal safety levels
-- Learn about safe, caution, and unsafe zones
-- Get real-time safety tips and warnings
+📌 Highlighted Endpoints
+Route	Function
+/	Home dashboard
+/game	Street safety simulator
+/detect	Audio threat detection
+/sos	Emergency alert center
+/chatbot	AI mental health support
+/send_sos/<file>	WhatsApp SOS
+🧪 What Makes This Project Recruiter-Ready
 
-### Audio Detection
-- Upload audio files (WAV, MP3, OGG supported)
-- Automatic detection of emergency sounds
-- Speech recognition for emergency keywords
-- Automatic SOS trigger on danger detection
+Fully original concept, not tutorial-level
 
-### Emergency SOS
-- Manual SOS button for immediate help
-- WhatsApp integration for emergency contacts
-- Audio evidence playback
-- Quick access to all safety features
+Combines AI, real-time processing, web dev, and APIs
 
-### AI Chatbot
-- Type messages to get AI-powered support
-- Crisis detection and intervention
-- Mental health guidance and resources
-- Safety tips and emotional support
+Directly solves public safety, a meaningful problem
 
-## API Endpoints
+Shows end-to-end engineering, not isolated skills
 
-- `GET /` - Main landing page
-- `GET /game` - Street safety game
-- `GET /detect` - Audio detection page
-- `POST /detect` - Process uploaded audio
-- `GET /sos` - Emergency SOS page
-- `GET /send_sos/<filename>` - Send WhatsApp SOS
-- `GET /chatbot` - AI chatbot page
-- `POST /chat` - Chatbot API endpoint
-- `GET /crisis-resources` - Crisis resources API
+Demonstrates ability to integrate multiple technologies into a functional product
 
-## Configuration
+Any recruiter reading this sees a candidate who can ideate, design, engineer, integrate, and deploy.
+Not just "follow tutorials."
 
-### Twilio WhatsApp Setup
-1. Create a Twilio account
-2. Set up WhatsApp sandbox
-3. Update credentials in `app.py`:
-   ```python
-   account_sid = "your_account_sid"
-   auth_token = "your_auth_token"
-   my_whatsapp = "whatsapp:+your_phone_number"
-   ```
+📬 Contact & Support
 
-### Gemini API Setup
-1. Get API key from Google AI Studio
-2. Update in `app.py`:
-   ```python
-   GEMINI_API_KEY = "your_gemini_api_key"
-   ```
-
-## Dependencies
-
-- **Flask**: Web framework
-- **TensorFlow**: Machine learning framework
-- **TensorFlow Hub**: Pre-trained models
-- **YAMNet**: Audio classification model
-- **Vosk**: Speech recognition
-- **Librosa**: Audio processing
-- **Twilio**: WhatsApp messaging
-- **Google Generative AI**: Chatbot functionality
-
-## Troubleshooting
-
-### Common Issues
-
-1. **Model loading errors**: Ensure stable internet connection for initial model downloads
-2. **Audio processing errors**: Check file format compatibility
-3. **Twilio errors**: Verify API credentials and phone number format
-4. **Gemini errors**: Check API key validity and quota
-
-### File Upload Issues
-- Ensure `static/uploads/` directory exists
-- Check file permissions
-- Verify audio file format support
-
-## Development
-
-### Adding New Features
-1. Create new route in `app.py`
-2. Add corresponding template in `templates/`
-3. Update navigation in `templates/index.html`
-4. Add styles in `static/style.css`
-
-### Customizing Styles
-- Main styles: `static/style.css`
-- Game styles: `static/game.css`
-- Responsive design included
-
-## License
-
-This project is for educational and safety purposes. Please ensure responsible use of emergency features and API services.
-
-## Support
-
-For issues or questions:
-1. Check the troubleshooting section
-2. Verify all dependencies are installed
-3. Ensure API keys are correctly configured
-4. Check console logs for error messages
+Feel free to raise issues, suggestions, or collaboration ideas.
