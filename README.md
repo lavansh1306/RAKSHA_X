@@ -1,120 +1,68 @@
-🚨 RAKHA X — Intelligent Safety & Support Platform
+# 🚨 RAKHA X — Intelligent Safety & Support Platform
 
-AI-powered street safety, real-time emergency detection, and mental-wellbeing support — built end-to-end using Flask, ML models, and production-ready APIs.
+![Status](https://img.shields.io/badge/Status-Operational-success?style=for-the-badge&logo=activity&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)
 
-Rakha X is a full-stack, real-world safety system designed to help users stay protected in high-risk situations.
-It combines audio threat detection, smart SOS alerts, an interactive safety simulator, and a mental-health AI assistant — all in one seamless web application.
+**Rakha X** is a full-stack, end-to-end safety ecosystem designed to protect users in high-risk environments. Unlike standard CRUD applications, this platform integrates real-time audio machine learning, automated emergency response systems, and AI-driven psychological support into a single, cohesive web application.
 
-⭐ Why This Project Matters
+---
 
-This isn’t a basic Flask CRUD app. It’s a multi-module safety platform solving real human problems:
+## ⚡ Tech Stack
 
-Detects gunshots, screams, explosions using ML (YAMNet)
+### **Backend & Core**
+![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 
-Analyses speech for panic keywords
+### **AI, ML & Audio Processing**
+![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
+![Librosa](https://img.shields.io/badge/Librosa-Audio_Analysis-blue?style=for-the-badge)
+![Vosk](https://img.shields.io/badge/Vosk-Speech_to_Text-lightgrey?style=for-the-badge)
+![Google Gemini](https://img.shields.io/badge/Google_Gemini-8E75B2?style=for-the-badge&logo=google&logoColor=white)
 
-Triggers automatic WhatsApp SOS alerts
+### **APIs & Communication**
+![Twilio](https://img.shields.io/badge/Twilio-F22F46?style=for-the-badge&logo=twilio&logoColor=white)
+![WhatsApp](https://img.shields.io/badge/WhatsApp_API-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)
 
-Guides users with AI-powered emotional support
+### **Frontend & Visualization**
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
-Educates citizens through a street safety simulation game
+---
 
-Built with production practices — modular architecture, real APIs, secure uploads, and model pipelines.
+## 🎯 Key Features
 
-🎯 Key Features
-🕹️ 1. Street Safety Simulator
+### 1. 🎧 Real-Time Audio Threat Detection
+A sophisticated surveillance module that listens for danger.
+* **YAMNet (TensorFlow):** Identifies environmental sounds like **gunshots, glass breaking, and explosions**.
+* **Vosk STT:** Analyzes speech for panic keywords (e.g., "Help", "Stop").
+* **Logic:** Automatically triggers the SOS protocol if the threat probability threshold is breached.
 
-A lightweight game that teaches users how to identify safe, caution, and danger zones.
-Built with: HTML Canvas + JS + Flask backend
+### 2. 🚨 Smart SOS System
+Automated crisis response connecting the user to the outside world.
+* **Twilio Integration:** Sends instant WhatsApp alerts to emergency contacts.
+* **Data Payload:** Includes precise location data, a customized alert message, and an audio clip of the event for evidence.
 
-🎧 2. Real-Time Audio Threat Detection
+### 3. 🧠 AI Mental-Health Assistant
+An intelligent companion for post-trauma support or anxiety management.
+* **Powered by Gemini Pro:** Offers emotional first-aid, crisis de-escalation, and safety recommendations.
+* **Context Aware:** Detects distress levels in user text and responds with empathy and actionable advice.
 
-YAMNet model via TensorFlow
+### 4. 🕹️ Street Safety Simulator
+A gamified educational module.
+* **Interactive Canvas:** A browser-based game that teaches users how to identify Safe, Caution, and Danger zones in urban environments.
 
-Speech-to-text (Vosk)
+---
 
-Detects emergency audio events
+## 📂 Project Structure
 
-Auto-triggers SOS if threat probability is high
-
-🚨 3. Smart SOS System
-
-WhatsApp alerts via Twilio
-
-Sends location, alert message & audio evidence
-
-One-click emergency button
-
-🧠 4. AI Mental-Health Assistant
-
-Gemini API integration
-
-Crisis detection
-
-Safety recommendations
-
-Emotional first-aid
-
-🏗️ Tech Stack
-
-Backend: Flask (Modular Blueprints)
-AI / ML: TensorFlow, TensorFlow Hub, YAMNet, Vosk STT
-Frontend: HTML, CSS, JS (Game + UI)
-APIs: Twilio WhatsApp, Google Gemini
-Audio Processing: Librosa
-Database: (Optional future module)
-
-📂 Project Structure
-project/
-├── app.py
-├── templates/
-├── static/
-├── models/
-└── requirements.txt
-
-
-Clear separation of concerns: UI, ML utilities, and backend routes.
-
-⚙️ Setup
-git clone <repo>
-cd project
-pip install -r requirements.txt
-python app.py
-
-Add API Keys
-
-In app.py:
-
-GEMINI_API_KEY = "your_key"
-account_sid = "your_sid"
-auth_token = "your_token"
-
-
-Then launch the app at http://localhost:5000.
-
-📌 Highlighted Endpoints
-Route	Function
-/	Home dashboard
-/game	Street safety simulator
-/detect	Audio threat detection
-/sos	Emergency alert center
-/chatbot	AI mental health support
-/send_sos/<file>	WhatsApp SOS
-🧪 What Makes This Project Recruiter-Ready
-
-Fully original concept, not tutorial-level
-
-Combines AI, real-time processing, web dev, and APIs
-
-Directly solves public safety, a meaningful problem
-
-Shows end-to-end engineering, not isolated skills
-
-Demonstrates ability to integrate multiple technologies into a functional product
-
-Any recruiter reading this sees a candidate who can ideate, design, engineer, integrate, and deploy.
-Not just "follow tutorials."
-
-📬 Contact & Support
-
-Feel free to raise issues, suggestions, or collaboration ideas.
+```text
+rakha-x/
+├── models/              # Pre-trained TensorFlow/YAMNet models
+├── static/              # CSS, JS, Game Assets, Audio files
+├── templates/           # HTML Jinja2 Templates
+├── app.py               # Main Flask Application (Routes & Logic)
+├── audio_processor.py   # Librosa & Vosk helper functions
+├── requirements.txt     # Python Dependencies
+└── README.md            # Documentation
