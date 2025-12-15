@@ -5,7 +5,7 @@
 ![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)
 
 **Rakha X** is a full-stack, end-to-end safety ecosystem designed to protect users in high-risk environments.  
-Unlike standard CRUD applications, this platform integrates **real-time audio machine learning**, **automated emergency response**, and **AI-driven psychological support** into a single cohesive system.
+Unlike standard CRUD applications, this platform integrates **real-time audio machine learning**, **automated emergency response**,  and  **AI-driven psychological support** into a single cohesive system.
 
 ---
 
@@ -83,4 +83,5 @@ rakha-x/
 ├── audio_processor.py   # Librosa & Vosk processing logic
 ├── requirements.txt     # Py
 └── README.md            #
+
 
