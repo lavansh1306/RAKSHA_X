@@ -34,7 +34,7 @@ Unlike standard CRUD applications, this platform integrates **real-time audio ma
 
 ## 🎯 Key Features
 
-### 🎧 Real-Time Audio Threat Detection
+### 🎧 Real-Time Audio Threat Detectionn
 A continuous surveillance module that listens for danger signals.
 - **YAMNet (TensorFlow):** Detects environmental threats like gunshots, glass breaking, and explosions.
 - **Vosk STT:** Analyzes live speech for panic keywords (e.g., *“help”*, *“stop”*).
@@ -81,5 +81,6 @@ rakha-x/
 ├── templates/           # HTML (Jinja2 templates)
 ├── app.py               # Main Flask application
 ├── audio_processor.py   # Librosa & Vosk processing logic
-├── requirements.txt     # Python dependencies
-└── README.md            # Documentation
+├── requirements.txt     # Py
+└── README.md            #
+
